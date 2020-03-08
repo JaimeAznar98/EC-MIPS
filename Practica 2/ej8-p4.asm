@@ -1,5 +1,5 @@
 .data 
-min: .asciiz "Introduce minutos: "
+min: .asciiz "Introduce los minutos: "
 seg: .asciiz " segundos."
 
 .text
@@ -23,7 +23,7 @@ imprim: addi $v0, $zero, 1
 	la $a0, seg #mostrar la cadena segundos, para que sea mas visible
 	li $v0, 4
 	syscall	
-	jr $ra
+	jr $ra #vuelve a jal multiplicacion
 	
 # 60 = 2^5 + 2^4 + 2^3 + 2^2
 #calculado en registros temporales auxiliares y despues devuelvo en v0

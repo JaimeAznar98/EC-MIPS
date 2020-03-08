@@ -29,7 +29,7 @@ salida_mal: la $a0, salida
 bucle: li $v0, 1
 	syscall
 	add $a0, $a0, 1
-	beq $a0, $a1, salida_bucle
+	bgt $a0, $a1, salida_bucle
 	j bucle
 	
 salida_bucle: li $v0, 10
