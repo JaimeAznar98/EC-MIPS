@@ -51,37 +51,6 @@ lw $a0, 0($a0)
 li $v0, 1
 syscall
 
-li $a0, '\n'
-li $v0, 11
-syscall
-
-la $a0, A
-la $a1, B
-
-lw $a0, 0($a0)
-lw $a1, 0($a1)
-
-bge $a0, $a1, B_mayor
-li $v0, 1
-syscall
-move $a0, $a1
-li $v0, 1
-syscall
-j acabar
-
-
-B_mayor: 
-	move $t0, $a0
-	move $a0, $a1
-	li $v0, 1
-	syscall
-	move $a0, $t0
-	li $v0, 1
-	syscall
-	j acabar
-	
-acabar: li $v0, 10
-	syscall	
 
 
 
