@@ -36,11 +36,12 @@ loop:
 	lw $t4, 0($t1) #cargar palabra de A
 	lw $t5, 0($t2) #cargar la palabra de B
 	
-	add $t6, $t4, $t5
-	sw $t6, 0($t3)
+	add $t6, $t4, $t5 #suma de A+B
+	sw $t6, 0($t3) #introduccion en C
 
 	sll $t0, $s4, 2
 	bne $s4, $s5, loop
+	 
 	
 li $v0, 10
 syscall
